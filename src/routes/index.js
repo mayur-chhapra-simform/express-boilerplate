@@ -3,7 +3,6 @@
  */
 
 import connection from "./v1/connection";
-import whiteboard from "./v1/whiteboard";
 
 const defineRoute = (application, versionTag, controllers) => {
   const versionPath = versionTag ? `/${versionTag}/` : `/`;
@@ -17,6 +16,5 @@ const defineRoute = (application, versionTag, controllers) => {
 module.exports = (app) => {
   defineRoute(app, "v1", {
     connection,
-    whiteboard,
   });
 };
